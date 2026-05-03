@@ -105,9 +105,53 @@
 				}
 			}
 		}
+		,{
+			"server": {
+				"$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+				"name": "ai.openkaiden.registry/slack",
+				"description": "MCP Server for the Slack API, enabling interaction with Slack workspaces",
+				"repository": {
+					"url": "https://github.com/modelcontextprotocol/servers",
+					"source": "github"
+				},
+				"version": "2025.4.25",
+				"packages": [
+					{
+						"registryType": "npm",
+						"identifier": "@modelcontextprotocol/server-slack",
+						"version": "2025.4.25",
+						"transport": {
+							"type": "stdio"
+						},
+						"environmentVariables": [
+							{
+								"name": "SLACK_BOT_TOKEN",
+								"description": "Slack Bot Token (starts with xoxb-)",
+								"isRequired": true,
+								"isSecret": true
+							},
+							{
+								"name": "SLACK_TEAM_ID",
+								"description": "Slack Team ID (starts with T)",
+								"isRequired": true,
+								"isSecret": false
+							}
+						]
+					}
+				]
+			},
+			"_meta": {
+				"io.modelcontextprotocol.registry/official": {
+					"status": "active",
+					"publishedAt": "2026-05-03T00:00:00Z",
+					"updatedAt": "2026-05-03T00:00:00Z",
+					"isLatest": true
+				}
+			}
+		}
 	],
 	"metadata": {
 		"nextCursor": "",
-		"count": 3
+		"count": 4
 	}
 }
